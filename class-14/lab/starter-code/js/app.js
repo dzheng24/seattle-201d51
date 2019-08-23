@@ -3,11 +3,14 @@
 // Cart constructor.
 var Cart = function(items) {
   // this.items is an array of CartItem instances.
-  this.items = items;
+  this.items = [];
+  this.itemNumber = 0;
 };
 
 Cart.prototype.addItem = function(product, quantity) {
   // TODO: Fill in this instance method to create a new CartItem and add it to this.items
+  this.itemNumber++;
+  this.items.push(itemNumber);
 };
 
 Cart.prototype.saveToLocalStorage = function() {
@@ -57,3 +60,5 @@ function generateCatalog() {
 
 // Initialize the app by creating the big list of products with images and names
 generateCatalog();
+
+
